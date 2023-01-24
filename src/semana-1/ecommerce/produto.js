@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Item = void 0;
-class Item {
+exports.Produto = void 0;
+class Produto {
     constructor(valor, nome, imagens, desconto) {
         this.valor = valor;
         this.nome = nome;
@@ -13,5 +13,9 @@ class Item {
         const valorDesconto = this.valor * this.desconto;
         return this.valor - valorDesconto;
     }
+    aplicarCupomDeDesconto(cupom) { }
+    mostrarInformacoes() {
+        console.log(`Produto: ${this.nome}, Valor: R$${this.valor}, Categoria: ${this.categoria}`);
+    }
 }
-exports.Item = Item;
+exports.Produto = Produto;

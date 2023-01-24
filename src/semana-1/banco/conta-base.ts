@@ -1,12 +1,10 @@
-import { Pessoa } from "./pessoa";
-
 export abstract class ContaBase {
   protected _saldo: number;
-  private _titular!: Pessoa;
+  private _titular!: string;
   private _numero: string;
 
   constructor(titular: string, numero: string) {
-    // this._titular = titular;
+    this._titular = titular;
     this._numero = numero;
     this._saldo = 0;
   }
